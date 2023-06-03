@@ -1,0 +1,10 @@
+{
+  "name": "next13.0-sanity3.0-r3f-starter",
+  "short_name": "next13.0-sanity3.0-r3f-starter",
+  "icons": [],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

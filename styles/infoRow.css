@@ -1,0 +1,42 @@
+.infoRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(100px, 1fr));
+  grid-template-rows: repeat(5, minmax(100px, 0.5fr));
+  justify-content: stretch;
+  margin: 0 auto;
+}
+
+.column__one {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: 1 / 8 / 3 / 12;
+}
+
+.column__two {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 3 / 5 / 7;
+}
+
+.column__header {
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin: 0 0 1.35rem 0;
+}
+
+.column__paragraph {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin: 0 0 1.5rem 0;
+}

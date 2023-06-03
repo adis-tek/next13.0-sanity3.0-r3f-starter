@@ -1,0 +1,130 @@
+.testimonials__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(100px, 1fr));
+  grid-template-rows: repeat(5, minmax(100px, 0.25fr));
+  margin: 0 0 100px 0px;
+}
+
+.testimonials__photo__container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  grid-area: 1 / 7 / 5 / 10;
+  margin: 0;
+}
+
+.testimonials__photo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  filter: brightness(0.6);
+}
+
+.testimonials__header {
+  position: relative;
+  font-size: 6em;
+  font-weight: 500;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  text-align: left;
+  grid-area: 1 / 4 / 4 / 10;
+  z-index: 1;
+}
+
+.testimonials__paragraph__container {
+  position: relative;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 55px 35px;
+  grid-area: 2 / 4 / 4 / 9;
+  z-index: 1;
+  align-self: center;
+}
+
+.testimonials__paragraph {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
+  z-index: 1;
+}
+
+.quotes {
+  quotes: "“" "”" "‘" "’";
+}
+
+.quotes::before {
+  font-size: 3rem;
+  content: open-quote;
+  padding: 0;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quotes::after {
+  font-size: 3rem;
+  content: close-quote;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.testimonials__arrows__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  grid-area: 4 / 7 / 4 / 8;
+  z-index: 1;
+}
+
+.testimonials__input__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.testimonials__arrow {
+  font-size: 3rem;
+  font-family: Garamond, serif;
+}
+
+.testimonials__count__container {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+
+.testimonials__count {
+  font-size: 1.35rem;
+  letter-spacing: 1.6;
+  font-family: Garamond, serif;
+  margin: 0;
+}

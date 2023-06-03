@@ -1,0 +1,37 @@
+.marquee {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 0 150px 0;
+}
+
+.marquee__inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.marquee__photo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

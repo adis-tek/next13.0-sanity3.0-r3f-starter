@@ -1,0 +1,79 @@
+.contact__container {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, minmax(50px, 0.4fr));
+  margin: 0 0 200px 0;
+  padding: 0 3.854166667%;
+}
+
+.contact__header {
+  position: relative;
+  font-size: 6em;
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  grid-area: 1 / 2 / 4 / 10;
+  z-index: 1;
+}
+
+.contact__photo__one {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  grid-area: 1 / 6 / 4 / 10;
+  margin: 0;
+}
+
+.contact__photo__two {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  grid-area: 3 / 10 / 5 / 13;
+  margin: 0;
+}
+
+.contact__photo__three {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  grid-area: 5 / 6 / 5 / 8;
+  margin: 0;
+}
+
+.contact__photo__four {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  grid-area: 3 / 3 / 4 / 6;
+  margin: 0;
+}
+
+.contact__icon {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  grid-area: 3 / 7 / 5 / 10;
+  margin: 0;
+  padding: 60px;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+.contact__image {
+  width: auto;
+  height: auto;
+  filter: brightness(0.8);
+}
+
+.contact__image__icon {
+  width: auto;
+  height: auto;
+  filter: invert() brightness(0.9);
+}
