@@ -1,9 +1,13 @@
+"use client";
+import Providers from "./providers";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Canvas from "../components/layout/canvas";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // import Shader from "../components/canvas/ShaderExample/ShaderExample";
 // For deubgging, please use static import above ^^^
 
+// Dynamic imports
 const Shader = dynamic(
   () => import("../components/canvas/ShaderExample/ShaderExample"),
   {
@@ -25,11 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Canvas>
-          <Shader />
-        </Canvas>
-        {/* Add a video background option later */}
-        {children}
+        <Providers>
+          <Canvas>
+            <Shader onClick={undefined} />
+          </Canvas>
+          {/* Add a video background option later */}
+          {children}
+          <ReactQueryDevtools initialIsOpen={false} />
+        </Providers>
       </body>
     </html>
   );

@@ -8,6 +8,10 @@ html {
   /* Overflow hidden for scroll based function. */
   /* overflow: hidden; */
   background: #070707;
+  --plyr-color-main: #fff; /* video player main color */
+  /* Main Font */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
 /* Sections

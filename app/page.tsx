@@ -9,6 +9,9 @@ import BoxComponent from "../components/canvas/BoxComponent";
 
 import { getPosts } from "../sanity/sanity-utils";
 import { videoId, provider } from "../utils/plyr-video";
+import PlyrVideo from "components/dom/PlyrVideo";
+import getQueryClient from "store";
+import { FetchPosts } from "store";
 
 // For deubgging, please use static import
 // const Shader = dynamic(
@@ -19,12 +22,12 @@ import { videoId, provider } from "../utils/plyr-video";
 // );
 
 // DOM elements here
-const DOM = (props) => {
-  const posts = props.props;
+const DOM = () => {
   return (
     <div>
       <h1>Index</h1>
-      {console.log(posts.map((post) => post.title))}
+      <PlyrVideo />
+      {/* {console.log(posts.map((post) => post.title))}
       {posts.map((post) => (
         <div key={post._id}>
           <h2>{post.title}</h2>
@@ -56,7 +59,7 @@ const DOM = (props) => {
             />
           ) : null}
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
@@ -73,11 +76,15 @@ const R3F = () => {
 };
 
 export default async function Page() {
-  const posts = await getPosts();
+  const client = getQueryClient;
+  await client.prefetchQuery({
+    queryKey: ["posts"],
+    queryFn: () => FetchPosts(),
+  });
   return (
     <>
-      <DOM props={posts} />
-      <R3F />
+      <DOM />
+      {/* <R3F /> */}
     </>
   );
 }
